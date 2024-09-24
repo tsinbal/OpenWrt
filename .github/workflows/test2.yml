@@ -41,5 +41,5 @@ jobs:
         echo "硬盘数量: $(ls /dev/sd* | grep -v [1-9] | wc -l)" && df -hT
         sudo -E apt-get -y update
         echo "$(go version)"
-        sudo -E apt-get --only-upgrade install golang
-        echo "$(go version)"
+        sudo -E apt-get purge -y golang*
+        echo "$(go version)" 
