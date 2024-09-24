@@ -47,7 +47,7 @@ jobs:
         sudo rm -rf /usr/local/go
         sudo rm -rf /usr/bin/go
         echo "$(go version)" 
-        wget “https://go.dev/dl/go1.22.4.linux-amd64.tar.gz”
+        wget "https://go.dev/dl/go1.22.4.linux-amd64.tar.gz"
         sudo tar -C /usr/local -zxvf go1.22.4.linux-amd64.tar.gz
         sudo vim ~/.bashrc
         export GOROOT=/usr/local/go
