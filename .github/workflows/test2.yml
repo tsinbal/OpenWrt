@@ -39,7 +39,19 @@ jobs:
         echo -e "$(sudo lshw -short -C memory | grep GiB)\n"
         echo "--------------------------硬盘信息--------------------------"
         echo "硬盘数量: $(ls /dev/sd* | grep -v [1-9] | wc -l)" && df -hT
+        echo "$(go version)" 
         sudo -E apt-get -y update
         echo "$(go version)"
-        sudo -E apt-get purge -y golang*
+        sudo -E apt-get remove golang-go
+        sudo apt-get remove --auto-remove golang-go
+        sudo rm -rf /usr/local/go
+        sudo rm -rf /usr/bin/go
+        echo "$(go version)" 
+        wget “https://go.dev/dl/go1.22.4.linux-amd64.tar.gz”
+        sudo tar -C /usr/local -zxvf go1.22.4.linux-amd64.tar.gz
+        sudo vim ~/.bashrc
+        export GOROOT=/usr/local/go
+        export PATH=$PATH:$GOROOT/bin
+        export GOPATH=/home/gpo/go
+        source ~/.bashrc
         echo "$(go version)" 
