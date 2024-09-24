@@ -60,6 +60,7 @@ jobs:
         export GOROOT=/usr/local/go
         export PATH=$PATH:$GOROOT/bin
         export GOPATH=/home/gpo/go
+        echo "$(go version)"
     - name: Clone Source Code
       run: |
         df -hT $GITHUB_WORKSPACE
