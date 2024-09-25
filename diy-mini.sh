@@ -37,6 +37,8 @@ git clone --depth=1 https://github.com/tsinbal/packages_lang_golang -b 22.x feed
 
 # 科学上网插件
 git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app-ssr-plus
+sed -i "s/+iptables +iptables-mod-tproxy/+iptables-mod-tproxy/g" package/luci-app-ssr-plus/luci-app-ssr-plus/Makefile
+
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 package/luci-app-passwall2
