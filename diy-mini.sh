@@ -36,7 +36,7 @@ git clone --depth=1 https://github.com/tsinbal/packages_lang_golang -b 23.x feed
 # git_sparse_clone master https://github.com/syb999/openwrt-19.07.1 package/network/services/msd_lite
 
 # 科学上网插件
-git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app-ssr-plus
+git clone --depth=1 -b master https://github.com/fw876/helloworld package/luci-app-ssr-plus
 sed -i "s/+iptables +iptables-mod-tproxy/+iptables-mod-tproxy/g" package/luci-app-ssr-plus/luci-app-ssr-plus/Makefile
 
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
