@@ -22,6 +22,9 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
+    - name: Maximize build disk space
+       uses: easimon/maximize-build-space@v10
+       
     - name: Checkout
       uses: actions/checkout@main
 
@@ -54,6 +57,8 @@ jobs:
         sudo -E apt-get -y autoremove --purge
         sudo -E apt-get -y clean
         sudo timedatectl set-timezone "$TZ"
+
+            
 
     - name: Clone Source Code
       run: |
